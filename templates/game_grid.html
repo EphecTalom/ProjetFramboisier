@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        html,body{ margin:0; padding:0; height:100%; width:100%; }
+        #full-size{
+          height:100%;
+          width:100%;
+          overflow:hidden; /* or overflow:auto; if you want scrollbars */
+        }
+        .game_container {
+
+            display: grid;
+            grid-auto-rows:7em;
+            grid-template-areas:
+              ". . a . ."
+              ". b c d ."
+              "e f g h i"
+              ". j k l ."
+              ". . m . .";
+
+            grid-gap: 2em;
+        }
+        .item_color-1 {background: #ff0066; text-align: center;  grid-area:b }
+        .item_color-2 {background: #ff0000; text-align: center;  grid-area:c }
+        .item_color-3 {background: #ffff00; text-align: center;  grid-area: d}
+        .item_color-4 {background: #009900; text-align: center;  grid-area: f }
+        .item_color-5 {background: #00ccff; text-align: center;  grid-area:g }
+        .item_color-6 {background: #cc00ff; text-align: center;  grid-area: h}
+        .item_color-7 {background: #ffccff; text-align: center;  grid-area: j}
+        .item_color-8 {background: #663300; text-align: center;  grid-area: k}
+        .item_color-9 {background: #0000ff; text-align: center;  grid-area: l }
+        .item_color-10{background: #00ffcc; text-align: center;  grid-area: a}
+        .item_color-11{background: #ff8400; text-align: center;  grid-area: m}
+        .item_color-12{background: #ff00b7; text-align: center;  grid-area: e}
+        .item_color-13{background: #7b00ff; text-align: center;  grid-area: i}
+
+    </style>
+</head>
+<body>
+    <div id="full-size">
+
+        <div class="game_container">
+
+            <div class="item_color-1">1</div>
+            <div class="item_color-2">2</div>
+            <div class="item_color-3">3</div>
+            <div class="item_color-4">4</div>
+            <div class="item_color-5">5</div>
+            <div class="item_color-6">6</div>
+            <div class="item_color-7">7</div>
+            <div class="item_color-8">8</div>
+            <div class="item_color-9">9</div>
+            <div class="item_color-10">up</div>
+            <div class="item_color-11">down</div>
+            <div class="item_color-12">left</div>
+            <div class="item_color-13">right</div>
+        </div
+    </div>
+
+</body>
+</html>
+
+
