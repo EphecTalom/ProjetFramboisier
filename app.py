@@ -209,7 +209,7 @@ def where_is_the_turle():
         bouton = str(dane_Elec(get_ir()))
         print(bouton)
         #t1=time()
-        if bouton == session['reponse']
+        if bouton == session['reponse']:
             print('ok')
             score += 1
             print(score)
