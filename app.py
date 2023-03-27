@@ -207,11 +207,11 @@ def where_is_the_turle():
     global score
     global need_input
     if score == 20:
-        redirect(url_for('won'))
-    if request.method == "POST":
-    #if need_input:
-        #bouton = str(dane_Elec(get_ir()))
-        bouton = str(request.form.get('num'))
+        return redirect(url_for('won'))
+    #if request.method == "POST":
+    if need_input:
+        bouton = str(dane_Elec(get_ir()))
+        #bouton = str(request.form.get('num'))
         print(bouton)
         t1=time()
         if bouton == session['reponse'] and (t1-t0)<=4:
