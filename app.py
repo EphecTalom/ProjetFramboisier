@@ -235,6 +235,7 @@ def where_is_the_turle():
 ###
 @app.route('/starting')
 def starting():
+    print('push play')
     affiche('starting.html')
     bouton = str(dane_Elec((get_ir())))
     if bouton=='play':
