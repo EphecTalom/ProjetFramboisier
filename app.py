@@ -246,20 +246,20 @@ def failed():
     affiche("failed.html")
     bouton = str(dane_Elec((get_ir())))
     if bouton=='stop':
-        redirect(url_for('starting'))
+        return redirect(url_for('starting'))
     if bouton=='play':
         sleep(5)
-        redirect(url_for('where_is_the_turle'))
+        return redirect(url_for('where_is_the_turle'))
 
 @app.route('/won')
 def won():
     affiche("won.html")
     bouton = str(dane_Elec((get_ir())))
     if bouton == 'stop':
-        redirect(url_for('starting'))
+        return redirect(url_for('starting'))
     if bouton == 'play':
         sleep(5)
-        redirect(url_for('where_is_the_turle'))
+        return redirect(url_for('where_is_the_turle'))
 ###
 
 if __name__ == "__main__":
