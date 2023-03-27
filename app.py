@@ -1,5 +1,5 @@
 from flask import Flask, request, url_for, redirect, session, render_template
-#from ir_getter import *
+from ir_getter import *
 import random
 import os
 from time import sleep, time
@@ -229,7 +229,7 @@ def where_is_the_turle():
     partie = initialize_plate(score)
     session['reponse'] = str(partie)
     print(session)
-    print("entrée")
+    print("entree")
     need_input = True
     return render_template("game_table.html")
 ###
