@@ -81,4 +81,3 @@ def get_ir():
         pass
     destroy()
     print("exit")
-print(get_ir())
