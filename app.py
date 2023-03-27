@@ -200,18 +200,16 @@ def initialize_plate(score=0):
 
 @app.route('/where_is_the_turtle', methods=["GET", "POST"])
 def where_is_the_turle():
-    t0=time()
+    #t0=time()
     global score
     global need_input
     if score == 20:
         return redirect(url_for('won'))
-    #if request.method == "POST":
     if need_input:
         bouton = str(dane_Elec(get_ir()))
-        #bouton = str(request.form.get('num'))
         print(bouton)
-        t1=time()
-        if bouton == session['reponse'] and (t1-t0)<=4:
+        #t1=time()
+        if bouton == session['reponse']
             print('ok')
             score += 1
             print(score)
