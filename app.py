@@ -178,10 +178,7 @@ def initialize_plate(score=0):
 
     modelc = """ 
         </div>
-<form action="{{url_for('game_play')}}" method ="POST">
-<input type=number name=num>
-<input type=submit value=valider>
-</form>
+
 </body>
 </html>"""
     a = random.randint(0, 12)
