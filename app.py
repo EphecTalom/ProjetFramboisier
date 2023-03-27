@@ -239,13 +239,17 @@ def starting():
 
 @app.route('/failed')
 def failed():
+    valid = False
     affiche("failed.html")
-    bouton = str(dane_Elec((get_ir())))
-    if bouton=='stop':
-        return redirect(url_for('starting'))
-    if bouton=='play':
-        sleep(5)
-        return redirect(url_for('where_is_the_turle'))
+    while valid != True:
+        bouton = str(dane_Elec((get_ir())))
+        if bouton=='stop':
+            valid = True
+            return redirect(url_for('starting'))
+        if bouton=='play':
+            valid = True
+            sleep(5)
+            return redirect(url_for('where_is_the_turle'))
 
 @app.route('/won')
 def won():
@@ -259,4 +263,4 @@ def won():
 ###
 
 if __name__ == "__main__":
-    app.run(debug=True, port=8080, host='0.0.0.0')
+    app.run(debug=True, host=os.getenv('IP','0.0.0.0'),port=int(os.getenv('PORT',8000)))
