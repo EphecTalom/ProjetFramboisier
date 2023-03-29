@@ -203,8 +203,8 @@ def where_is_the_turle():
     #t0=time()
     global score
     global need_input
-    if score == 20:
-        return redirect(url_for('won'))
+    if score == 10:
+        return "<h1>TU ES MON CHAMPION</h1>"
     if need_input:
         bouton = str(dane_Elec(get_ir()))
         print(bouton)
@@ -219,14 +219,14 @@ def where_is_the_turle():
             print('not ok')
             score = 0
             need_input = False
-            return redirect(url_for('failed'))
+            return "<h1>c'est loose</h1>"
 
     partie = initialize_plate(score)
     session['reponse'] = str(partie)
     print(session)
     print("entree")
     need_input = True
-    return render_template("game_table.html")
+    return render_template("game_table.html")#comment  reload la page à ce niveau???
 ###
 @app.route('/starting')
 def starting():
