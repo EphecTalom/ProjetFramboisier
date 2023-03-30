@@ -133,7 +133,7 @@ def initialize_plate(score=0):
     modela = """<!DOCTYPE html>
 <html>
 <head>
-    <meta http-equiv="refresh" content="30">
+    <meta http-equiv="refresh" content="2">
     <style>
         html,body{ margin:0; padding:0; height:100%; width:100%; }
         #full-size{
